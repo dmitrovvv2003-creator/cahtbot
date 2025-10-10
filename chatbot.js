@@ -2073,7 +2073,7 @@ function getScriptUrl(userId) {
     return googleScriptUrls[index];
 }
 
-const tokenScriptUrl = "https://script.google.com/macros/s/AKfycbxXpBDI_8bpTm-W8Da8IYrlGy1QtvTJo0fhhvTL2oS7N44pIAK45DzVu-AZIMyUEtvO/exec";
+const tokenScriptUrl = "https://script.google.com/macros/s/AKfycbzTpexThR941vOGuDikeGhb5Tt0guZ5xO5MQoFiI7tLvqRDNrYxXdYaaFtIvP_okh0Z/exec";
 
 function getLeastUsedBot() {
     if (Object.keys(botUsage).length === 0) {
@@ -4485,6 +4485,7 @@ createHotButtonsInContainer();
 
 
 });
+
 
 
 
