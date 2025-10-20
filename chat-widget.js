@@ -48,5 +48,6 @@ class ChatWidget extends HTMLElement {
 }
 
 
-<chat-widget></chat-widget> в HTML
+<chat-widget></chat-widget>
+
 customElements.define('chat-widget', ChatWidget);
