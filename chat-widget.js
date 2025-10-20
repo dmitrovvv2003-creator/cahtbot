@@ -50,3 +50,4 @@ class ChatWidget extends HTMLElement {
 
 customElements.define('chat-widget', ChatWidget);
 
+
