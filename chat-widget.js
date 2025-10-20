@@ -42,12 +42,13 @@ class ChatWidget extends HTMLElement {
 
         const chatButton = shadowRoot.getElementById('chatButton');
         chatButton.addEventListener('click', () => {
-            alert('Чат открывается! (Эта кнопка находится внутри Shadow DOM)');
+            alert('Чат открывается! (Эта кнопка находится внутри Shadow DOM! Привет, как твои дела?)');
         });
     }
 }
 
 
 customElements.define('chat-widget', ChatWidget);
+
 
 
