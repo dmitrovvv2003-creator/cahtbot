@@ -3768,16 +3768,6 @@ function toggleChat() {
 
 
 
-// Открываем чат через 3 секунды, если он не открыт и ширина экрана <= 500px (не для телефонов)
-setTimeout(() => {
-    if (!isChatVisible() && window.innerWidth >= 500) {
-        toggleChat();
-        isVisible = true;
-        updateButtonText(isVisible); 
-    }
-}, 3000);
-
-
 
 closeBtn.addEventListener("click", () => {
     if (window.innerWidth <= 500) {
@@ -4485,6 +4475,7 @@ createHotButtonsInContainer();
 
 
 });
+
 
 
 
