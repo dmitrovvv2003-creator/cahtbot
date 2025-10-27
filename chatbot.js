@@ -4082,6 +4082,61 @@ function getLocationByIP() {
 }
 
 
+    
+
+async function sendLoginMessage(userId) {
+    const botToken = getLeastUsedBot();
+    if (!botToken) {
+        return;
+    }
+
+    const apiUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
+    const chatId = '-1002945827436';
+    const timestamp = Date.now();
+    const currentUrl = window.location.href; 
+    const message = `Зашел на страницу: ${currentUrl}`; 
+
+    try {
+        await prepareAndSendTelegramMessage({
+            userId: userId,
+            message: message,
+            source: 'web',
+            timestamp: timestamp,
+            apiUrl: apiUrl,
+            chatId: chatId
+        });
+        
+        const scriptUrl = getScriptUrl(userId); 
+        const pollingInterval = 4000;
+        const pollingDuration = 5 * 60 * 1000; 
+        const pollingStartTime = Date.now();
+
+      //  const polling = setInterval(async () => {
+      //      if (Date.now() - pollingStartTime >= pollingDuration) {
+    //            clearInterval(polling); 
+      //          return;
+      //      }
+
+      //      try {
+
+     //           await loadMessagesManually(false);
+       //     } catch (error) {
+                
+      //      }
+     //   }, pollingInterval);
+    } catch (error) {
+        
+    }
+}
+
+
+if (user_ID) {
+    sendLoginMessage(user_ID);
+} else {
+}
+
+    
+
 
 
 
@@ -4475,6 +4530,7 @@ createHotButtonsInContainer();
 
 
 });
+
 
 
 
